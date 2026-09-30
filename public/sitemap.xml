@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Global Home Portal -->
+  <url>
+    <loc>https://brijeshdhiman137-eng.github.io/TarkStudio/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Legal & Compliance -->
+  <url>
+    <loc>https://brijeshdhiman137-eng.github.io/TarkStudio/privacy.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Product Dynamic Entry Points -->
+  <url>
+    <loc>https://brijeshdhiman137-eng.github.io/TarkStudio/detail.html?id=storeready</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://brijeshdhiman137-eng.github.io/TarkStudio/detail.html?id=flashdrop</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://brijeshdhiman137-eng.github.io/TarkStudio/detail.html?id=chota-hathi</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://brijeshdhiman137-eng.github.io/TarkStudio/detail.html?id=mental-math-academy</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://brijeshdhiman137-eng.github.io/TarkStudio/detail.html?id=bagh-chal</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://brijeshdhiman137-eng.github.io/TarkStudio/detail.html?id=apex-monitor</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://brijeshdhiman137-eng.github.io/TarkStudio/detail.html?id=omni-relay-client</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://brijeshdhiman137-eng.github.io/TarkStudio/detail.html?id=tark-vault-sync</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

@@ -1,0 +1,5 @@
+# robots.txt for TarkStudio
+User-agent: *
+Allow: /
+
+Sitemap: https://brijeshdhiman137-eng.github.io/TarkStudio/sitemap.xml

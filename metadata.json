@@ -1,0 +1,6 @@
+{
+  "name": "TarkStudio Portal",
+  "description": "TarkStudio Official Hub – Independent studio and distribution ecosystem for high-performance Android apps, game builds, and privacy-first utilities. Direct, verified software downloads.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

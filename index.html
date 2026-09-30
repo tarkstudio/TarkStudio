@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>TarkStudio | Privacy-First Offline Apps, APKs & Web Tools</title>
+    <meta name="title" content="TarkStudio | Privacy-First Offline Apps, APKs & Web Tools" />
+    <meta name="description" content="TarkStudio Official Hub – Independent studio and distribution ecosystem for high-performance Android apps, game builds, and privacy-first utilities. Direct, verified software downloads." />
+    <meta name="keywords" content="TarkStudio, offline android apk, air-gapped tools, p2p file share, bagh chal online, storeready assets, privacy tools" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="TarkStudio" />
+    <link rel="canonical" href="https://brijeshdhiman137-eng.github.io/TarkStudio/" />
+
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="googlea5473c3d3042a5fa.html" />
+    <meta name="google-site-verification" content="googlea5473c3d3042a5fa" />
+
+    <!-- Social Media / Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://brijeshdhiman137-eng.github.io/TarkStudio/" />
+    <meta property="og:title" content="TarkStudio | Privacy-First Offline Apps & Tools" />
+    <meta property="og:description" content="TarkStudio Official Hub – Independent studio and distribution ecosystem for high-performance Android apps, game builds, and privacy-first utilities. Direct, verified software downloads." />
+    <meta property="og:image" content="./assets/og-banner.png" />
+    <meta property="og:site_name" content="TarkStudio" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://brijeshdhiman137-eng.github.io/TarkStudio/" />
+    <meta name="twitter:title" content="TarkStudio | Privacy-First Offline Apps & Tools" />
+    <meta name="twitter:description" content="TarkStudio Official Hub – Independent studio and distribution ecosystem for high-performance Android apps, game builds, and privacy-first utilities. Direct, verified software downloads." />
+    <meta name="twitter:image" content="./assets/og-banner.png" />
+
+    <!-- Google Site Name Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "TarkStudio",
+      "alternateName": ["Tark Studio Hub", "TarkStudio Ecosystem"],
+      "url": "https://brijeshdhiman137-eng.github.io/TarkStudio/"
+    }
+    </script>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/brijeshdhiman137-eng/tarkstudio-log.png/main/1000349515__2_-removebg-preview.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="dark bg-slate-950 text-slate-100 tark-theme">
+    <div class="app-container">
+      <!-- 1. Top Navbar with Official TarkStudio Logo -->
+      <header class="navbar">
+        <div class="navbar-inner">
+          <a href="#" class="navbar-brand" aria-label="TarkStudio Home">
+            <img src="https://raw.githubusercontent.com/brijeshdhiman137-eng/tarkstudio-log.png/main/1000349515__2_-removebg-preview.png" alt="TarkStudio" class="navbar-logo-img" style="height: 36px; width: auto; object-fit: contain; margin-right: 10px; background: transparent;" referrerpolicy="no-referrer" />
+            <span class="navbar-title">TarkStudio</span>
+          </a>
+
+          <div class="navbar-status">
+            <span class="status-dot-pulse"></span>
+            <span>Zero-Telemetry Network</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- 2. Hero Section with Official TarkStudio Emblem & Glow -->
+      <section class="hero-section">
+        <div class="hero-shield-wrapper">
+          <img src="https://raw.githubusercontent.com/brijeshdhiman137-eng/tarkstudio-log.png/main/1000349515__2_-removebg-preview.png" 
+               alt="TarkStudio Emblem" 
+               class="hero-shield-img"
+               referrerpolicy="no-referrer" />
+        </div>
+
+        <h1 class="hero-title">
+          Software & Distribution Hub
+        </h1>
+        <p class="hero-subtitle hidden sm:block">
+          Direct access to local-first Android APKs, air-gapped utilities, and high-performance web applications.
+        </p>
+
+        <!-- Dual-Tier Filtering System Card -->
+        <div class="filter-system-card max-w-full overflow-hidden" id="filterSystem">
+          <!-- Top Row: Operational Mode Switcher -->
+          <div class="filter-tier-row">
+            <div class="filter-tier-label">
+              <span>⚡ Mode</span>
+            </div>
+            <div class="toggle-group flex flex-wrap gap-1.5" id="modeFilterBar" role="radiogroup" aria-label="Operational Mode Filter">
+              <button type="button" class="filter-btn active" data-mode="all" aria-pressed="true">
+                <span>🌐 All Modes</span>
+              </button>
+              <button type="button" class="filter-btn" data-mode="online" aria-pressed="false">
+                <span>🟢 Online</span>
+              </button>
+              <button type="button" class="filter-btn" data-mode="offline" aria-pressed="false">
+                <span>⚡ Offline / Local</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="filter-divider"></div>
+
+          <!-- Second Row: Product Type Switcher -->
+          <div class="filter-tier-row">
+            <div class="filter-tier-label">
+              <span>📦 Type</span>
+            </div>
+            <div class="toggle-group flex flex-wrap gap-1.5" id="typeFilterBar" role="radiogroup" aria-label="Product Type Filter">
+              <button type="button" class="filter-btn active" data-type="all" aria-pressed="true">
+                <span>All Types</span>
+              </button>
+              <button type="button" class="filter-btn" data-type="apk" aria-pressed="false">
+                <span>📱 Android APKs</span>
+              </button>
+              <button type="button" class="filter-btn" data-type="website" aria-pressed="false">
+                <span>💻 Web Tools / Sites</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Controls Row: Search Bar (Top & Full Width on Mobile) + Desktop Counter Badge -->
+      <section class="content-controls-bar">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search products, keywords, tools..."
+            aria-label="Search software catalog"
+          />
+          <button type="button" id="searchClearBtn" class="search-clear-btn" aria-label="Clear search">✕</button>
+        </div>
+
+        <div class="counter-badge-box hidden md:inline-flex" id="productCounter">
+          Showing <span class="counter-count-bold">0</span> products
+        </div>
+      </section>
+
+      <!-- Main Dynamic Grid -->
+      <main class="portal-main px-2.5 sm:px-6 py-4 max-w-7xl mx-auto w-full" id="portalMain">
+        <div id="appsGrid" class="apps-dashboard-grid grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-4 md:gap-5">
+          <!-- Dynamic cards rendered by app.js -->
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="portal-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <img src="https://raw.githubusercontent.com/brijeshdhiman137-eng/tarkstudio-log.png/main/1000349515__2_-removebg-preview.png" alt="TarkStudio" style="height: 24px; width: auto; object-fit: contain; background: transparent;" referrerpolicy="no-referrer" />
+            <span>TarkStudio // Client-Side Repository</span>
+          </div>
+          <div class="flex items-center gap-3 flex-wrap justify-center">
+            <a href="privacy.html" class="footer-link">Privacy Policy &amp; Terms</a>
+            <span class="text-slate-600">•</span>
+            <span>Official Identity • Air-Gapped Compliant</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Client Script -->
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

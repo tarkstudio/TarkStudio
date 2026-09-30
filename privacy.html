@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TarkStudio — Privacy Policy &amp; Platform Terms of Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0B0F17;
+    --bg-raised: #121826;
+    --bg-panel: #161D2C;
+    --border: #232C3F;
+    --border-soft: #1B2333;
+    --text: #E7ECF5;
+    --text-dim: #9AA6BC;
+    --text-faint: #63708A;
+    --accent: #D6A85C;
+    --accent-soft: #4A3F27;
+    --accent-bright: #F0C583;
+    --teal: #5FB3A9;
+    --danger: #E2694F;
+    --serif: 'Spectral', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --mono: 'JetBrains Mono', Consolas, monospace;
+    --max-w: 880px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, rgba(214,168,92,0.06), transparent 60%),
+      radial-gradient(900px 500px at 100% 10%, rgba(95,179,169,0.05), transparent 55%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:var(--accent-bright);}
+  a:hover{color:var(--accent);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--teal); outline-offset:3px;}
+
+  ::selection{background:var(--accent-soft); color:var(--text);}
+
+  /* ---------- Header / Hero ---------- */
+  header.hero{
+    border-bottom:1px solid var(--border);
+    padding:72px 24px 56px;
+    position:relative;
+    overflow:hidden;
+  }
+  header.hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(230,236,245,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(230,236,245,0.025) 1px, transparent 1px);
+    background-size:42px 42px;
+    mask-image: linear-gradient(to bottom, black, transparent 85%);
+    pointer-events:none;
+  }
+  .hero-inner{
+    max-width:var(--max-w);
+    margin:0 auto;
+    position:relative;
+  }
+  .kicker{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:0.04em;
+    color:var(--teal);
+    margin:0 0 18px;
+  }
+  .kicker::before{content:"§ "; color:var(--accent);}
+  h1.title{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(2.1rem, 4.4vw, 3.1rem);
+    line-height:1.12;
+    margin:0 0 20px;
+    color:#fff;
+    max-width:14ch;
+  }
+  .subtitle{
+    font-size:1.05rem;
+    color:var(--text-dim);
+    max-width:62ch;
+    margin:0 0 28px;
+  }
+  .meta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 12px;
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--text-faint);
+  }
+  .meta-pill{
+    border:1px solid var(--border);
+    background:var(--bg-raised);
+    padding:6px 12px;
+    border-radius:5px;
+    color:var(--text-dim);
+  }
+  .meta-pill strong{color:var(--accent-bright); font-weight:500;}
+
+  /* ---------- Layout ---------- */
+  .layout{
+    max-width:1180px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:260px minmax(0,1fr);
+    gap:0;
+  }
+  nav.toc{
+    padding:40px 20px 80px 24px;
+    position:sticky;
+    top:0;
+    align-self:start;
+    max-height:100vh;
+    overflow-y:auto;
+    border-right:1px solid var(--border);
+  }
+  nav.toc h2{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--text-faint);
+    margin:0 0 14px;
+    font-weight:500;
+  }
+  nav.toc ol{
+    list-style:none;
+    margin:0; padding:0;
+    counter-reset:toc;
+  }
+  nav.toc li{
+    counter-increment:toc;
+    margin-bottom:2px;
+  }
+  nav.toc a{
+    display:block;
+    padding:7px 10px 7px 8px;
+    border-radius:5px;
+    font-size:13.5px;
+    color:var(--text-dim);
+    text-decoration:none;
+    border-left:2px solid transparent;
+  }
+  nav.toc a::before{
+    content:counter(toc) ".  ";
+    color:var(--text-faint);
+    font-family:var(--mono);
+    font-size:12px;
+  }
+  nav.toc a:hover{
+    color:var(--text);
+    background:var(--bg-panel);
+    border-left-color:var(--accent);
+  }
+
+  main.doc{
+    padding:40px 40px 120px;
+    min-width:0;
+  }
+  main.doc > p.intro{
+    color:var(--text-dim);
+    font-size:15px;
+    padding:16px 18px;
+    background:var(--bg-panel);
+    border:1px solid var(--border-soft);
+    border-left:3px solid var(--teal);
+    border-radius:6px;
+    margin:0 0 40px;
+  }
+
+  section.clause{
+    padding:44px 0 8px;
+    border-top:1px solid var(--border-soft);
+  }
+  section.clause:first-of-type{border-top:none; padding-top:0;}
+
+  .clause-num{
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--accent);
+    letter-spacing:0.03em;
+    margin:0 0 8px;
+    display:block;
+  }
+  h2.clause-title{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:1.55rem;
+    color:#fff;
+    margin:0 0 20px;
+    line-height:1.3;
+  }
+  h3.sub-title{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:1.02rem;
+    color:var(--accent-bright);
+    margin:28px 0 12px;
+  }
+  .clause p{
+    color:#CBD4E3;
+    margin:0 0 15px;
+    max-width:74ch;
+  }
+  .clause ul, .clause ol.legal-list{
+    margin:0 0 18px;
+    padding-left:22px;
+    max-width:74ch;
+  }
+  .clause ul li, .clause ol.legal-list li{
+    color:#CBD4E3;
+    margin-bottom:9px;
+    padding-left:4px;
+  }
+  ol.legal-list{
+    counter-reset:legal;
+    list-style:none;
+    padding-left:0;
+  }
+  ol.legal-list > li{
+    counter-increment:legal;
+    position:relative;
+    padding-left:34px;
+  }
+  ol.legal-list > li::before{
+    content:counter(legal, lower-alpha) ")";
+    position:absolute;
+    left:0;
+    color:var(--teal);
+    font-family:var(--mono);
+    font-size:13px;
+  }
+  strong{color:var(--text); font-weight:600;}
+  code{
+    font-family:var(--mono);
+    background:var(--bg-raised);
+    border:1px solid var(--border);
+    padding:1px 6px;
+    border-radius:4px;
+    font-size:0.88em;
+    color:var(--accent-bright);
+  }
+
+  .callout{
+    border:1px solid var(--border);
+    background:var(--bg-panel);
+    border-radius:8px;
+    padding:18px 20px;
+    margin:18px 0 24px;
+    max-width:74ch;
+  }
+  .callout.warn{border-left:3px solid var(--danger);}
+  .callout.info{border-left:3px solid var(--teal);}
+  .callout p:last-child{margin-bottom:0;}
+  .callout .tag{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--danger);
+    display:block;
+    margin-bottom:8px;
+  }
+  .callout.info .tag{color:var(--teal);}
+
+  table.data-table{
+    width:100%;
+    border-collapse:collapse;
+    margin:16px 0 26px;
+    max-width:74ch;
+    font-size:14.5px;
+  }
+  table.data-table th, table.data-table td{
+    border:1px solid var(--border);
+    padding:10px 14px;
+    text-align:left;
+    vertical-align:top;
+  }
+  table.data-table th{
+    background:var(--bg-raised);
+    color:var(--accent-bright);
+    font-weight:500;
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:0.02em;
+  }
+  table.data-table td{color:#CBD4E3;}
+
+  .grievance-card{
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:26px 28px;
+    max-width:74ch;
+    margin-top:10px;
+  }
+  .grievance-card dl{margin:0; display:grid; grid-template-columns:140px 1fr; row-gap:12px; column-gap:16px;}
+  .grievance-card dt{font-family:var(--mono); font-size:12px; color:var(--text-faint); letter-spacing:0.02em; padding-top:2px;}
+  .grievance-card dd{margin:0; color:var(--text); font-size:15px;}
+  .grievance-card dd a{font-weight:500;}
+
+  footer.doc-footer{
+    max-width:74ch;
+    margin:60px 0 0;
+    padding-top:28px;
+    border-top:1px solid var(--border-soft);
+    color:var(--text-faint);
+    font-size:13px;
+  }
+
+  /* Responsive */
+  @media (max-width: 940px){
+    .layout{grid-template-columns:1fr;}
+    nav.toc{
+      position:relative;
+      max-height:none;
+      border-right:none;
+      border-bottom:1px solid var(--border);
+      padding:28px 24px;
+    }
+    main.doc{padding:36px 22px 90px;}
+    header.hero{padding:52px 20px 40px;}
+  }
+
+  @media print{
+    nav.toc{display:none;}
+    .layout{grid-template-columns:1fr;}
+    body{background:#fff; color:#111;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div style="margin-bottom: 1.25rem;">
+      <a href="./index.html" style="display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--mono); font-size: 13px; color: var(--teal); text-decoration: none; padding: 5px 12px; background: var(--bg-raised); border: 1px solid var(--border); border-radius: 5px; transition: border-color 0.15s ease;">← Back to Software Hub</a>
+    </div>
+    <p class="kicker">Legal &amp; Compliance Document</p>
+    <h1 class="title">Privacy Policy &amp; Platform Terms of Service</h1>
+    <p class="subtitle">Governing the TarkStudio web hub, its software showcase, public review system, distribution links, and your use of this website — issued under the laws of India, including the Digital Personal Data Protection Act, 2023 and the Information Technology Act, 2000.</p>
+    <div class="meta-row">
+      <span class="meta-pill">Platform: <strong>TarkStudio</strong></span>
+      <span class="meta-pill">Operated by: <strong>Brijesh, Independent Software Developer</strong></span>
+      <span class="meta-pill">Governing Law: <strong>India</strong></span>
+      <span class="meta-pill">Jurisdiction: <strong>Lucknow, Uttar Pradesh</strong></span>
+      <span class="meta-pill">Effective Date: <strong id="eff-date"></strong></span>
+      <span class="meta-pill">Version: <strong>1.0</strong></span>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1">Preamble &amp; Acceptance</a></li>
+      <li><a href="#s2">Definitions &amp; Interpretation</a></li>
+      <li><a href="#s3">Platform Architecture &amp; Scope</a></li>
+      <li><a href="#s4">Severability of In-App Policies</a></li>
+      <li><a href="#s5">Intellectual Property Rights</a></li>
+      <li><a href="#s6">Prohibited Conduct &amp; Anti-Piracy</a></li>
+      <li><a href="#s7">Data We Collect on the Web Hub</a></li>
+      <li><a href="#s8">Legal Basis &amp; Purpose of Processing</a></li>
+      <li><a href="#s9">Cookies &amp; Server Log Policy</a></li>
+      <li><a href="#s10">Data Retention</a></li>
+      <li><a href="#s11">Data Sharing &amp; Third-Party Processors</a></li>
+      <li><a href="#s12">Your Rights (DPDP Act / GDPR)</a></li>
+      <li><a href="#s13">Children's Privacy</a></li>
+      <li><a href="#s14">Distribution Channels &amp; Store Disclaimers</a></li>
+      <li><a href="#s15">Disclaimer of Warranties</a></li>
+      <li><a href="#s16">Limitation of Liability</a></li>
+      <li><a href="#s17">Indemnification</a></li>
+      <li><a href="#s18">Term, Suspension &amp; Termination</a></li>
+      <li><a href="#s19">Governing Law &amp; Jurisdiction</a></li>
+      <li><a href="#s20">Dispute Resolution</a></li>
+      <li><a href="#s21">Grievance Redressal Mechanism</a></li>
+      <li><a href="#s22">Amendments to this Policy</a></li>
+      <li><a href="#s23">Miscellaneous Provisions</a></li>
+      <li><a href="#s24">Contact Information</a></li>
+    </ol>
+  </nav>
+
+  <main class="doc">
+    <p class="intro">This document is a legally binding agreement between you (<strong>"User," "you,"</strong> or <strong>"your"</strong>) and Brijesh, the independent software developer operating under the name <strong>TarkStudio</strong> (<strong>"TarkStudio," "we," "us," "our,"</strong> or the <strong>"Studio"</strong>), governing your access to and use of the TarkStudio website, catalog, showcase pages, and all associated web properties (collectively, the <strong>"Web Hub"</strong>). Please read this document in its entirety before using the Web Hub or downloading any software referenced on it.</p>
+
+    <!-- 1 -->
+    <section class="clause" id="s1">
+      <span class="clause-num">Section 1</span>
+      <h2 class="clause-title">Preamble &amp; Acceptance of Terms</h2>
+      <p>1.1. TarkStudio is a solo-developer software studio that designs, engineers, compiles, and publishes proprietary applications, games, simulation utilities, and Android Package Kit ("APK") builds. This document (the <strong>"Policy"</strong> or <strong>"Agreement"</strong>) sets out (i) the Privacy Policy governing personal data processed by the Web Hub, and (ii) the Platform Terms of Service governing your use of the Web Hub, in a single, unified instrument.</p>
+      <p>1.2. By accessing, browsing, or otherwise using the Web Hub — including by submitting a review, downloading a linked application, or clicking through to a certified app store listing — you acknowledge that you have read, understood, and irrevocably agree to be bound by this Policy in its entirety, along with our right to enforce it. If you do not agree with any provision of this Policy, you must immediately discontinue all use of the Web Hub.</p>
+      <p>1.3. This Policy is published in compliance with, and is intended to satisfy the requirements of, the Information Technology Act, 2000 (including the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 and the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, as amended), the Digital Personal Data Protection Act, 2023 ("DPDP Act") and rules framed thereunder, and — to the extent any user accesses the Web Hub from within the European Economic Area, United Kingdom, or Switzerland — the General Data Protection Regulation (EU) 2016/679 ("GDPR"), applied here as a matter of the Studio's voluntary best-practice adoption rather than an admission of establishment or targeting within those territories.</p>
+      <p>1.4. If you are accessing the Web Hub on behalf of a minor, you represent that you are the parent or legal guardian of that minor and that you consent to this Policy on the minor's behalf, subject to Section 13 (Children's Privacy) below.</p>
+    </section>
+
+    <!-- 2 -->
+    <section class="clause" id="s2">
+      <span class="clause-num">Section 2</span>
+      <h2 class="clause-title">Definitions &amp; Interpretation</h2>
+      <p>For the purposes of this Policy, the following terms shall bear the meanings set out below, unless the context requires otherwise:</p>
+      <ol class="legal-list">
+        <li><strong>"Web Hub"</strong> means the TarkStudio website, including all subdomains, catalog pages, showcase listings, review submission systems, and any interactive features hosted thereon.</li>
+        <li><strong>"Application(s)"</strong> or <strong>"App(s)"</strong> means any software, game, simulation tool, utility, or APK build showcased, listed, described, or linked to from the Web Hub, irrespective of the distribution channel through which it is ultimately installed.</li>
+        <li><strong>"In-App Policy"</strong> means the standalone privacy policy, permission disclosure, and end-user license terms embedded within, or published in connection with, an individual Application's own binary or settings menu.</li>
+        <li><strong>"Distribution Channel"</strong> means any third-party platform, marketplace, or mechanism — including certified app stores such as Indus Appstore, Google Play, or direct APK sideloading — through which an Application is delivered to an end-user's device.</li>
+        <li><strong>"Personal Data"</strong> has the meaning ascribed to it under Section 2(t) of the DPDP Act, being any data about an individual who is identifiable by or in relation to such data, and, where the context of a European user applies, carries the corresponding meaning under Article 4(1) GDPR.</li>
+        <li><strong>"Data Principal"</strong> means the individual to whom Personal Data relates, as defined under Section 2(j) of the DPDP Act (referred to as a "Data Subject" under GDPR).</li>
+        <li><strong>"Data Fiduciary"</strong> means TarkStudio, in its capacity as the entity that, alone or in conjunction with others, determines the purpose and means of processing Personal Data, as defined under Section 2(i) of the DPDP Act.</li>
+        <li><strong>"Processing"</strong> means any wholly or partly automated operation performed on digital Personal Data, including collection, recording, organisation, storage, adaptation, retrieval, use, alignment, restriction, erasure, or destruction.</li>
+        <li><strong>"Review Submitter"</strong> means any User who voluntarily submits an app review, rating, alias, or comment through the Web Hub's public feedback system.</li>
+        <li><strong>"Grievance Officer"</strong> means the individual designated under Section 21 of this Policy to receive and address complaints under the IT Act and DPDP Act.</li>
+        <li><strong>"Intellectual Property"</strong> means all source code, object code, compiled binaries, APK packages, game mechanics, algorithms, visual assets, audio assets, trademarks, trade names, logos, and other proprietary works owned by TarkStudio.</li>
+      </ol>
+      <p>2.1. Headings are inserted for convenience only and shall not affect the interpretation of this Policy. Words importing the singular include the plural and vice versa. References to "writing" include email communication.</p>
+    </section>
+
+    <!-- 3 -->
+    <section class="clause" id="s3">
+      <span class="clause-num">Section 3</span>
+      <h2 class="clause-title">Platform Architecture &amp; Scope of This Policy</h2>
+      <p>3.1. <strong>Nature of the Platform.</strong> TarkStudio operates exclusively as a centralized, proprietary software showcase, discovery portal, and in-house developer engineering lab. Unlike open third-party marketplaces, TarkStudio does not host, list, promote, or distribute any application, game, tool, or digital asset created by an external developer, publisher, or studio. One hundred percent (100%) of all software featured on the Web Hub — including without limitation all Applications such as the Bagh-Chal strategy board game, utility tools, and physics simulation modules — is conceived, designed, coded, compiled, tested, and owned strictly in-house by TarkStudio.</p>
+      <p>3.2. <strong>Two-Layer Architecture.</strong> You expressly acknowledge and agree that TarkStudio's digital ecosystem operates on a deliberate two-layer architecture:</p>
+      <ol class="legal-list">
+        <li><strong>The Catalog/Showcase Layer</strong> — comprising this Web Hub — which functions purely as an informational storefront: presenting descriptions, screenshots, version histories, changelogs, developer commentary, and download or store-redirect links for each Application, together with a public review and rating system described in Section 7.</li>
+        <li><strong>The Application Layer</strong> — comprising each individual Application's own compiled binary, installed instance, and in-app settings — which operates independently of the Web Hub once installed on a user's device, and which is governed by that specific Application's own In-App Policy as described in Section 4.</li>
+      </ol>
+      <p>3.3. This Policy governs <strong>only</strong> the Web Hub: your browsing of the catalog, your interaction with the review system, standard web server diagnostics, and the hyperlinks connecting the Web Hub to external, certified Distribution Channels. This Policy does <strong>not</strong> govern, and shall not be construed as governing, the runtime data practices, device-level permissions, telemetry, or in-app purchase mechanics of any installed Application — those matters are addressed exclusively within each Application's own In-App Policy.</p>
+    </section>
+
+    <!-- 4 -->
+    <section class="clause" id="s4">
+      <span class="clause-num">Section 4</span>
+      <h2 class="clause-title">Severability of In-App Policies</h2>
+      <p>4.1. Each Application distributed by TarkStudio maintains its own dedicated privacy policy, permission-disclosure statement, and localized settings menu embedded within, or accessible from, its own binary or store listing (each, an <strong>"In-App Policy"</strong>). The applicable In-App Policy governs, without limitation: device permissions requested at runtime (such as storage, camera, or network access), local data caching, offline gameplay data, in-app analytics (if any), in-app purchase or advertising mechanics (if any), and any data processed after installation.</p>
+      <p>4.2. <strong>Independent Severability.</strong> Each In-App Policy is legally and operationally severable from this Web Hub Policy. A finding of invalidity, ambiguity, or unenforceability in relation to any provision of an In-App Policy shall have no bearing whatsoever on the validity or enforceability of this Web Hub Policy, and vice versa. Users are strongly advised to read the specific In-App Policy of any Application prior to installing or using it, as permission boundaries and data practices may differ from Application to Application based on that Application's specific functionality.</p>
+      <p>4.3. Where an Application is distributed through a certified Distribution Channel (see Section 14), that channel may impose additional or overlapping disclosure obligations (such as a Google Play "Data Safety" declaration or an equivalent Indus Appstore disclosure). Such channel-level disclosures supplement, but do not replace, the Application's own In-App Policy, and neither supplements nor amends this Web Hub Policy.</p>
+    </section>
+
+    <!-- 5 -->
+    <section class="clause" id="s5">
+      <span class="clause-num">Section 5</span>
+      <h2 class="clause-title">Intellectual Property Rights</h2>
+      <p>5.1. <strong>Ownership.</strong> All right, title, and interest — including all worldwide copyright, trademark, trade secret, patent, and other intellectual and proprietary rights — in and to the Web Hub, every Application, all source code, object code, compiled binaries, APK build artifacts, game mechanics, rule systems, level and asset designs, visual assets, audio assets, user interface designs, trademarks, trade names, logos, taglines, and all associated documentation (collectively, the <strong>"TarkStudio IP"</strong>) are, and shall at all times remain, the exclusive property of TarkStudio (Brijesh, in his individual capacity as sole developer and proprietor), whether or not registered.</p>
+      <p>5.2. <strong>No Transfer of Rights.</strong> Nothing in this Policy, and no act of browsing the Web Hub, downloading an Application, or interacting with any showcased content, shall be construed as transferring, assigning, licensing, or otherwise conveying any ownership interest in the TarkStudio IP to you. You are granted, subject to full compliance with this Policy and each applicable In-App Policy, a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to install and use each Application solely for your own personal, non-commercial use, on devices you own or control.</p>
+      <p>5.3. <strong>Reservation of Rights.</strong> All rights not expressly granted to you under this Policy are reserved by TarkStudio. No implied licenses are granted under this Policy.</p>
+      <h3 class="sub-title">5.4 Trademarks</h3>
+      <p>The name "TarkStudio," associated logos, and the names of individual Applications (including but not limited to "Bagh-Chal") are trademarks and/or trade names of TarkStudio, whether or not formally registered. You may not use any such marks without TarkStudio's prior written consent, except to the extent necessary to accurately reference the Application in a manner consistent with fair use.</p>
+    </section>
+
+    <!-- 6 -->
+    <section class="clause" id="s6">
+      <span class="clause-num">Section 6</span>
+      <h2 class="clause-title">Prohibited Conduct &amp; Anti-Piracy Provisions</h2>
+      <p>6.1. In consideration of the license granted under Section 5.2, and as a condition of your continued access to the Web Hub and any Application, you expressly undertake that you shall NOT, and shall not permit, authorize, encourage, or assist any third party to:</p>
+      <ol class="legal-list">
+        <li>Reverse-engineer, disassemble, decompile, or otherwise attempt to derive the source code, underlying algorithms, structure, or ideas of any Application or the Web Hub, except to the limited extent such restriction is expressly prohibited by applicable law notwithstanding this limitation;</li>
+        <li>Create, distribute, host, or promote any modified, patched, "modded," cracked, or otherwise altered version of an Application (a <strong>"Mod APK"</strong>), whether for the purpose of circumventing licensing restrictions, removing attribution, altering game mechanics, or any other purpose;</li>
+        <li>Mirror, rehost, re-upload, or redistribute any Application, APK file, or any portion of the Web Hub's content on any third-party website, file-sharing service, marketplace, or Distribution Channel not expressly authorized in writing by TarkStudio;</li>
+        <li>Scrape, harvest, crawl, or extract data, content, source files, or assets from the Web Hub or any Application through automated means (including bots, spiders, or scripts) without TarkStudio's prior written consent;</li>
+        <li>Circumvent, disable, or interfere with any security-related feature of the Web Hub or an Application, including any feature that enforces limitations on use or access;</li>
+        <li>Use the Web Hub or any Application to develop a competing product or service, or for any benchmarking or competitive analysis purpose without authorization;</li>
+        <li>Remove, obscure, or alter any copyright, trademark, or other proprietary rights notice contained in or on the Web Hub or any Application;</li>
+        <li>Submit false, defamatory, spam, automated, or bot-generated content through the public review system described in Section 7;</li>
+        <li>Engage in any activity that disrupts, degrades, or imposes an unreasonable load on the Web Hub's servers or infrastructure, including denial-of-service attacks;</li>
+        <li>Use the Web Hub or any Application for any unlawful purpose or in violation of any applicable local, state, national, or international law.</li>
+      </ol>
+      <div class="callout warn">
+        <span class="tag">Enforcement Notice</span>
+        <p>Any violation of this Section 6 constitutes a material breach of this Policy and may result in, without limitation: immediate termination of your license to use the affected Application, technical measures to block your access to the Web Hub, and civil and/or criminal legal action under applicable Indian law — including but not limited to the Copyright Act, 1957, the Information Technology Act, 2000, and the Indian Penal Code / Bharatiya Nyaya Sanhita, 2023 provisions relating to computer-related offences, theft of intellectual property, and forgery. TarkStudio reserves the right to pursue injunctive relief, statutory damages, and recovery of legal costs against any infringing party.</p>
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section class="clause" id="s7">
+      <span class="clause-num">Section 7</span>
+      <h2 class="clause-title">Data We Collect on the Web Hub</h2>
+      <p>7.1. TarkStudio has designed the Web Hub around a principle of <strong>data minimization</strong>. The Web Hub does not require, and does not offer, any mandatory account creation, user registration, login, or sign-up flow of any kind. You may browse the entire catalog of Applications, view descriptions, screenshots, and reviews, and navigate to external Distribution Channels without providing any Personal Data whatsoever.</p>
+      <h3 class="sub-title">7.2 Public Reviews &amp; Community Feedback</h3>
+      <p>Where you voluntarily choose to submit a review, rating, or comment regarding an Application through the Web Hub's public feedback feature, we collect the following categories of information directly from you:</p>
+      <table class="data-table">
+        <thead>
+          <tr><th>Data Field</th><th>Description</th><th>Mandatory?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Name / Alias</td><td>A display name or alias of your choosing, shown publicly alongside your review.</td><td>Yes</td></tr>
+          <tr><td>Star Rating</td><td>A numeric rating (e.g., 1–5 stars) reflecting your assessment of the Application.</td><td>Yes</td></tr>
+          <tr><td>Comment / Review Text</td><td>Free-text feedback describing your experience with the Application.</td><td>Optional</td></tr>
+          <tr><td>Timestamp</td><td>The date and time at which the review was submitted, recorded automatically.</td><td>Automatic</td></tr>
+        </tbody>
+      </table>
+      <p>7.3. This information is stored in our backend infrastructure, which currently consists of the Google Sheets API (operated by Google LLC), used solely as a structured data store for the purpose of publicly displaying community reviews on the relevant Application's showcase page. You expressly acknowledge that the Name/Alias, Star Rating, and Comment you submit are <strong>public by design</strong> and will be visible to all visitors of the Web Hub. You should not submit any sensitive, confidential, or identifying information (such as your legal full name, phone number, email address, or address) within the Name/Alias or Comment fields, as TarkStudio bears no responsibility for the public disclosure of information you voluntarily choose to include in a public-facing field.</p>
+      <h3 class="sub-title">7.4 What We Do NOT Collect</h3>
+      <p>TarkStudio expressly does not engage in any of the following practices on the Web Hub:</p>
+      <ul>
+        <li>No mandatory user registration, account creation, or login credentials;</li>
+        <li>No invasive behavioral tracking or cross-site tracking of individual Users;</li>
+        <li>No sale, rental, or commercial transfer of any telemetry, usage data, or Personal Data to third parties;</li>
+        <li>No third-party advertising-network behavioral tracking, profiling, or targeted-advertising cookies on the Web Hub;</li>
+        <li>No collection of payment card information, government identification numbers, biometric data, or health data through the Web Hub.</li>
+      </ul>
+    </section>
+
+    <!-- 8 -->
+    <section class="clause" id="s8">
+      <span class="clause-num">Section 8</span>
+      <h2 class="clause-title">Legal Basis &amp; Purpose of Processing</h2>
+      <p>8.1. <strong>Under the DPDP Act, 2023.</strong> TarkStudio processes the Personal Data described in Section 7 on the basis of your free, specific, informed, unconditional, and unambiguous consent, given through the clear affirmative action of voluntarily completing and submitting the review submission form, in accordance with Section 6 of the DPDP Act. You may withdraw such consent at any time in accordance with Section 12 of this Policy, without affecting the lawfulness of processing carried out prior to such withdrawal.</p>
+      <p>8.2. <strong>Purpose Limitation.</strong> Personal Data collected via the review system is processed strictly for the following specified purposes, and no other: (i) public display of community reviews and ratings on the relevant Application's showcase page to assist other prospective users in making an informed decision; (ii) aggregation of star ratings into an average rating displayed on the Web Hub; and (iii) moderation of the review system to detect and remove spam, abuse, or policy-violating content as described in Section 6.</p>
+      <p>8.3. <strong>Under GDPR (where applicable).</strong> To the extent a User accesses the Web Hub from a jurisdiction where GDPR applies, the legal basis for processing corresponds to Article 6(1)(a) GDPR (consent). Such Users additionally benefit from the rights enumerated in Section 12.2 below.</p>
+      <p>8.4. <strong>Server Diagnostics.</strong> Processing of standard HTTP server logs (Section 9) is carried out on the basis of TarkStudio's legitimate interest in maintaining the security, integrity, and operational availability of the Web Hub — namely, the prevention of Distributed Denial-of-Service ("DDoS") attacks and other malicious network activity — which interest is not overridden by the minimal, non-identifying nature of the data involved.</p>
+    </section>
+
+    <!-- 9 -->
+    <section class="clause" id="s9">
+      <span class="clause-num">Section 9</span>
+      <h2 class="clause-title">Cookies &amp; Server Log Policy</h2>
+      <p>9.1. <strong>Server Diagnostic Logs.</strong> As is standard practice for any web server, the infrastructure hosting the Web Hub automatically records certain non-identifying technical information for every request made to it, including: truncated or hashed IP address ranges, browser user-agent string, referring URL, requested resource path, HTTP response status code, and request timestamp (collectively, <strong>"Server Logs"</strong>). Server Logs are retained strictly for the purposes of (i) detecting, mitigating, and investigating DDoS attacks and other malicious traffic patterns, and (ii) maintaining general operational integrity, uptime, and security of the Web Hub. Server Logs are not used to build individual user profiles, are not cross-referenced with review submissions, and are not shared with advertising networks.</p>
+      <p>9.2. <strong>Cookies.</strong> The Web Hub does not deploy third-party advertising, tracking, or behavioral-profiling cookies. Where strictly necessary session or functional cookies are used (for example, to remember your display preferences or to prevent duplicate review submissions within a short window), such cookies are limited to what is technically necessary for that specific function and do not persist beyond what is reasonably required for that purpose. No consent-requiring analytics or marketing cookies are set by the Web Hub as of the Effective Date of this Policy.</p>
+      <p>9.3. Should TarkStudio's cookie practices materially change in the future (for example, through the introduction of privacy-respecting analytics), this Policy will be updated in accordance with Section 22, and, where required by applicable law, a cookie consent mechanism will be implemented prior to the deployment of any non-essential cookie.</p>
+    </section>
+
+    <!-- 10 -->
+    <section class="clause" id="s10">
+      <span class="clause-num">Section 10</span>
+      <h2 class="clause-title">Data Retention</h2>
+      <p>10.1. <strong>Review Data.</strong> Name/Alias, Star Rating, Comment, and Timestamp data submitted via the review system are retained for as long as reasonably necessary to fulfil the purpose described in Section 8.2 — namely, for as long as the corresponding Application remains actively showcased on the Web Hub — or until you exercise your right to erasure under Section 12, whichever occurs earlier.</p>
+      <p>10.2. <strong>Server Logs.</strong> Server Logs described in Section 9.1 are retained for a rolling period not exceeding ninety (90) days from the date of the relevant request, after which they are automatically purged or irreversibly anonymized, save where a specific log entry is required to be retained for a longer period in connection with an active security investigation or a legal obligation, in which case retention is limited to what is strictly necessary for that specific purpose.</p>
+      <p>10.3. Upon expiry of the applicable retention period, or upon a valid erasure request, TarkStudio shall delete or irreversibly anonymize the relevant Personal Data using commercially reasonable methods, except where continued retention is mandated by applicable law (including tax, accounting, or law-enforcement retention obligations), in which case data is retained solely for the duration of, and solely for the purpose of, such legal obligation.</p>
+    </section>
+
+    <!-- 11 -->
+    <section class="clause" id="s11">
+      <span class="clause-num">Section 11</span>
+      <h2 class="clause-title">Data Sharing &amp; Third-Party Data Processors</h2>
+      <p>11.1. TarkStudio does not sell, rent, trade, or otherwise commercially transfer any Personal Data collected through the Web Hub to any third party for that third party's own marketing or commercial purposes.</p>
+      <p>11.2. TarkStudio engages the following limited category of third-party service provider strictly in the capacity of a data processor, acting solely on TarkStudio's documented instructions:</p>
+      <table class="data-table">
+        <thead><tr><th>Processor</th><th>Role</th><th>Data Involved</th></tr></thead>
+        <tbody>
+          <tr><td>Google LLC — Google Sheets API</td><td>Structured backend storage for public review submissions</td><td>Name/Alias, Star Rating, Comment, Timestamp</td></tr>
+          <tr><td>Google LLC — Google Drive</td><td>Secure hosting and distribution of standalone APK packages</td><td>IP address and standard HTTP download request headers</td></tr>
+        </tbody>
+      </table>
+      <p>11.3. Google LLC processes such data subject to its own separate privacy policy and its Google Cloud / Workspace data processing terms; TarkStudio has selected this processor on the basis of its industry-standard security and infrastructure practices. Where such transfer involves data leaving India, TarkStudio relies on the applicable safeguards offered by the processor's standard contractual and security frameworks to ensure a comparable standard of protection.</p>
+      <p>11.4. TarkStudio may further disclose Personal Data where required to do so: (i) to comply with a legal obligation, court order, or lawful request by a governmental or regulatory authority in accordance with applicable Indian law; (ii) to protect and defend the rights or property of TarkStudio, including enforcement of Section 6 (Prohibited Conduct); (iii) to prevent or investigate possible wrongdoing in connection with the Web Hub; or (iv) to protect the personal safety of Users of the Web Hub or the public.</p>
+      <p>11.5. In the event of a merger, acquisition, or sale of substantially all of the assets of the TarkStudio business, Personal Data may be transferred as part of that transaction, subject to the transferee's agreement to honor the commitments made in this Policy with respect to previously collected Personal Data.</p>
+    </section>
+
+    <!-- 12 -->
+    <section class="clause" id="s12">
+      <span class="clause-num">Section 12</span>
+      <h2 class="clause-title">Your Rights as a Data Principal / Data Subject</h2>
+      <p>12.1. <strong>Rights under the DPDP Act, 2023.</strong> As a Data Principal, you have the following rights in respect of your Personal Data processed by TarkStudio:</p>
+      <ol class="legal-list">
+        <li><strong>Right to Access Information</strong> — to obtain a summary of the Personal Data we hold about you and the processing activities undertaken in respect of it;</li>
+        <li><strong>Right to Correction and Updating</strong> — to request correction of inaccurate or misleading Personal Data, and completion of incomplete Personal Data;</li>
+        <li><strong>Right to Erasure</strong> — to request deletion of your Personal Data (including your submitted review, alias, rating, and comment) where it is no longer necessary for the purpose for which it was collected, or where you withdraw consent;</li>
+        <li><strong>Right to Grievance Redressal</strong> — to have any complaint regarding the processing of your Personal Data addressed by our designated Grievance Officer, as set out in Section 21;</li>
+        <li><strong>Right to Nominate</strong> — to nominate another individual to exercise your rights under the DPDP Act in the event of your death or incapacity, by written notice to the Grievance Officer;</li>
+        <li><strong>Right to Withdraw Consent</strong> — to withdraw your previously given consent at any time, with effect equivalent in ease to the manner in which consent was originally given, without affecting the lawfulness of processing based on consent prior to its withdrawal.</li>
+      </ol>
+      <p>12.2. <strong>Additional Rights for GDPR-Applicable Users.</strong> Where GDPR applies to you, you additionally have the right to: data portability (Article 20); restriction of processing (Article 18); objection to processing carried out on the basis of legitimate interest (Article 21); and the right to lodge a complaint with your local supervisory authority.</p>
+      <h3 class="sub-title">12.3 How to Exercise Your Rights — Correction &amp; Deletion Workflow</h3>
+      <p>To request correction or deletion of a review you have submitted, or to exercise any other right described above, please submit a written request to the Grievance Officer at the email address specified in Section 21, including: (i) the Application page on which your review appears; (ii) the Name/Alias used at the time of submission; (iii) the approximate date/timestamp of submission; and (iv) a clear description of the action requested. Upon receipt of a valid request, TarkStudio shall act upon it within the timeline specified in Section 21.4. TarkStudio reserves the right to request reasonable additional information solely for the purpose of verifying that the request originates from the legitimate submitter of the relevant review, in order to prevent fraudulent deletion or correction requests by unrelated third parties.</p>
+    </section>
+
+    <!-- 13 -->
+    <section class="clause" id="s13">
+      <span class="clause-num">Section 13</span>
+      <h2 class="clause-title">Children's Privacy</h2>
+      <p>13.1. The Web Hub, including its public review submission feature, is not intentionally directed at, marketed to, or designed for children below the age of eighteen (18) years, as defined under Section 2(f) of the DPDP Act. TarkStudio does not knowingly collect Personal Data from any individual it has actual knowledge is a child, through the Web Hub's review system, without first obtaining verifiable consent of the parent or lawful guardian in accordance with Section 9 of the DPDP Act.</p>
+      <p>13.2. Where TarkStudio becomes aware, or has reasonable grounds to believe, that Personal Data has been collected from a child without appropriate parental or guardian consent, TarkStudio shall take reasonable steps to delete such data promptly, and to terminate the underlying review submission.</p>
+      <p>13.3. Certain individual Applications featured on the Web Hub (such as family-friendly games) may be designed with content appropriate for a general or younger audience; however, any collection of Personal Data by such an Application after installation is governed exclusively by that Application's own In-App Policy, which shall separately address compliance with Section 9 of the DPDP Act and any applicable child-directed-service obligations under the relevant Distribution Channel's policies.</p>
+      <p>13.4. Parents and guardians who believe their child has submitted Personal Data through the Web Hub without appropriate consent are encouraged to contact the Grievance Officer immediately using the details in Section 21.</p>
+    </section>
+
+    <!-- 14 -->
+    <section class="clause" id="s14">
+      <span class="clause-num">Section 14</span>
+      <h2 class="clause-title">Distribution Channels &amp; Third-Party Store Disclaimers</h2>
+      <p>14.1. Applications showcased on the Web Hub are made available to end-users through one or more of the following authorized Distribution Channels: (i) certified third-party app stores, including without limitation Indus Appstore; and/or (ii) verified direct-installation APK packages hosted securely via Google Drive and distributed from the Web Hub.</p>
+      <p>14.2. <strong>Marketplace-Level Telemetry Disclaimer.</strong> Where an Application is installed via a certified app store such as Indus Appstore (or, where applicable, Google Play), that store operator independently collects and processes certain installation, usage, crash-reporting, and account-level telemetry in accordance with its own privacy policy and developer distribution agreement (for example, the Indus Appstore Developer Terms or the Google Play Developer Distribution Agreement). Such marketplace-level telemetry is collected and controlled by the relevant store operator, not by TarkStudio, and is governed exclusively by that store's own terms and privacy policy, which TarkStudio encourages you to review independently prior to installation.</p>
+      <p>14.3. TarkStudio makes no representation or warranty regarding the privacy practices, security posture, content moderation policies, refund policies, or continued availability of any third-party Distribution Channel, and disclaims all liability arising from your interaction with such a Distribution Channel, to the fullest extent permitted by applicable law.</p>
+      <p>14.4. <strong>Direct APK Installation.</strong> Where you elect to install an Application via a direct APK package rather than through a certified app store, you acknowledge that: (i) you are responsible for enabling "install from unknown sources" or equivalent device settings at your own risk; (ii) TarkStudio provides cryptographic checksums or equivalent verification information where reasonably practicable to allow you to verify the authenticity of the APK package prior to installation; and (iii) TarkStudio bears no responsibility for any Application obtained from a source other than the Web Hub's official download link or an authorized certified app store listing, including any tampered, counterfeit, or malware-laden file falsely represented as a TarkStudio Application.</p>
+    </section>
+
+    <!-- 15 -->
+    <section class="clause" id="s15">
+      <span class="clause-num">Section 15</span>
+      <h2 class="clause-title">Disclaimer of Warranties</h2>
+      <div class="callout warn">
+        <span class="tag">"As Is" / "As Available"</span>
+        <p>THE WEB HUB, ALL APPLICATIONS, AND ALL CONTENT MADE AVAILABLE THROUGH THEM ARE PROVIDED ON AN <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE"</strong> BASIS, WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, TARKSTUDIO EXPRESSLY DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, AND ANY WARRANTIES ARISING FROM COURSE OF DEALING OR USAGE OF TRADE.</p>
+      </div>
+      <p>15.1. Without limiting the generality of the foregoing, TarkStudio does not warrant that: (i) the Web Hub or any Application will be uninterrupted, timely, secure, or error-free; (ii) the results obtained from the use of the Web Hub or any Application will be accurate or reliable; (iii) any errors in the Web Hub or an Application will be corrected; (iv) the Web Hub or any Application is free of viruses, malware, or other harmful components, beyond commercially reasonable security practices adopted by TarkStudio; or (v) any Application will be compatible with your specific device, operating system version, or hardware configuration.</p>
+      <p>15.2. You acknowledge that software inherently may contain defects and that your use of any Application is at your sole risk. TarkStudio provides no assurance that an Application's functioning will not be affected by device-level constraints, third-party operating system updates, or your own device configuration.</p>
+    </section>
+
+    <!-- 16 -->
+    <section class="clause" id="s16">
+      <span class="clause-num">Section 16</span>
+      <h2 class="clause-title">Limitation of Liability</h2>
+      <p>16.1. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL TARKSTUDIO, ITS DEVELOPER, OR ANY OF THEIR RESPECTIVE AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATING TO YOUR ACCESS TO OR USE OF, OR INABILITY TO ACCESS OR USE, THE WEB HUB OR ANY APPLICATION.</p>
+      <p>16.2. Without limiting the generality of Section 16.1, TarkStudio shall bear no liability whatsoever for:</p>
+      <ol class="legal-list">
+        <li><strong>Device-level hardware failures</strong>, including but not limited to processor overheating, battery degradation, storage corruption, or physical device damage allegedly arising from the use of an Application;</li>
+        <li><strong>Operating-system incompatibilities</strong>, including changes introduced by third-party OS updates (such as Android version upgrades) that render an Application partially or wholly non-functional;</li>
+        <li><strong>User misconfiguration</strong>, including incorrect permission settings, disabled system services, insufficient storage space, or installation from unauthorized/tampered sources;</li>
+        <li><strong>Third-party network issues</strong>, including internet service provider outages, mobile carrier data restrictions, DNS failures, or third-party server downtime (including that of any certified app store or the Google Sheets API);</li>
+        <li>Any loss or corruption of data stored locally on your device by an Application, where such Application does not provide cloud backup functionality;</li>
+        <li>Any unauthorized access to, or alteration of, your data resulting from circumstances outside TarkStudio's reasonable control.</li>
+      </ol>
+      <p>16.3. <strong>Aggregate Liability Cap.</strong> Notwithstanding anything to the contrary in this Policy, and to the extent any liability cannot be disclaimed under applicable Indian law, TarkStudio's aggregate liability arising out of or relating to this Policy, the Web Hub, or any Application — whether in contract, tort, or otherwise — shall not exceed the greater of (a) the amount, if any, actually paid by you to TarkStudio for the relevant Application in the twelve (12) months preceding the event giving rise to the claim, or (b) five hundred Indian Rupees (₹500), it being acknowledged that all Applications showcased are currently offered free of charge unless expressly stated otherwise on the relevant listing.</p>
+      <p>16.4. Nothing in this Section 16 shall operate to exclude or limit liability that cannot lawfully be excluded or limited under the laws of India, including liability for death or personal injury caused by proven gross negligence, or liability for fraud or fraudulent misrepresentation.</p>
+    </section>
+
+    <!-- 17 -->
+    <section class="clause" id="s17">
+      <span class="clause-num">Section 17</span>
+      <h2 class="clause-title">Indemnification</h2>
+      <p>17.1. You agree to indemnify, defend, and hold harmless TarkStudio, its developer (Brijesh), and their respective successors and assigns, from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or in any way connected with: (a) your violation of this Policy or any applicable In-App Policy; (b) your violation of any applicable law or the rights of any third party in connection with your use of the Web Hub or an Application; (c) any Content you submit through the review system, including any claim that such Content is defamatory, infringing, or otherwise unlawful; (d) your engagement in any Prohibited Conduct described in Section 6, including piracy, unauthorized redistribution, or reverse-engineering; or (e) your misuse of any Application, including installation via unauthorized or tampered sources.</p>
+      <p>17.2. TarkStudio reserves the right, at its own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, in which event you agree to cooperate with TarkStudio's defense of such claim.</p>
+    </section>
+
+    <!-- 18 -->
+    <section class="clause" id="s18">
+      <span class="clause-num">Section 18</span>
+      <h2 class="clause-title">Term, Suspension &amp; Termination</h2>
+      <p>18.1. This Policy takes effect on the Effective Date and continues to apply for as long as you use the Web Hub or any Application, until terminated in accordance with this Section.</p>
+      <p>18.2. TarkStudio reserves the right, at its sole discretion and without prior notice, to suspend or terminate your access to the Web Hub, remove any review or Content you have submitted, or restrict your ability to use an Application, in the event of a reasonably suspected violation of this Policy, applicable law, or where necessary to protect the security or integrity of the Web Hub or an Application.</p>
+      <p>18.3. You may discontinue your use of the Web Hub and any Application at any time. Termination of your use does not extinguish any accrued rights or liabilities, including your obligations under Sections 5, 6, 16, and 17, which shall survive termination.</p>
+      <p>18.4. Sections 5 (Intellectual Property), 6 (Prohibited Conduct), 15 (Warranty Disclaimer), 16 (Limitation of Liability), 17 (Indemnification), 19 (Governing Law), 20 (Dispute Resolution), and 23 (Miscellaneous) shall survive any termination or expiration of this Policy.</p>
+    </section>
+
+    <!-- 19 -->
+    <section class="clause" id="s19">
+      <span class="clause-num">Section 19</span>
+      <h2 class="clause-title">Governing Law &amp; Jurisdiction</h2>
+      <p>19.1. This Policy, and any dispute or claim arising out of or in connection with it or its subject matter (including non-contractual disputes or claims), shall be governed by and construed in accordance with the laws of India, without regard to conflict-of-laws principles.</p>
+      <p>19.2. Subject to Section 20 below, the courts situated in <strong>Lucknow, Uttar Pradesh, India</strong> shall have exclusive jurisdiction to adjudicate any dispute arising out of or in connection with this Policy, and you irrevocably submit to the exclusive jurisdiction of such courts and waive any objection to venue or forum non conveniens.</p>
+    </section>
+
+    <!-- 20 -->
+    <section class="clause" id="s20">
+      <span class="clause-num">Section 20</span>
+      <h2 class="clause-title">Dispute Resolution</h2>
+      <p>20.1. <strong>Good-Faith Negotiation.</strong> In the event of any dispute, controversy, or claim arising out of or relating to this Policy, the parties shall first attempt in good faith to resolve the matter through direct negotiation, by the Complaining Party providing written notice of the dispute to the Grievance Officer described in Section 21, with a reasonable opportunity (not less than thirty (30) days) to resolve the matter before escalating further.</p>
+      <p>20.2. <strong>Arbitration.</strong> If a dispute is not resolved through negotiation within the period specified in Section 20.1, either party may refer the dispute to arbitration by a sole arbitrator, mutually appointed by the parties, to be conducted in Lucknow, Uttar Pradesh, India, in the English language, in accordance with the provisions of the Arbitration and Conciliation Act, 1996 (as amended). The arbitral award shall be final and binding on the parties, subject to any right of appeal available under applicable law.</p>
+      <p>20.3. Nothing in this Section 20 shall prevent either party from seeking urgent interim or injunctive relief from a court of competent jurisdiction (as identified in Section 19.2) where necessary to prevent irreparable harm, including in connection with Intellectual Property infringement under Section 6.</p>
+    </section>
+
+    <!-- 21 -->
+    <section class="clause" id="s21">
+      <span class="clause-num">Section 21</span>
+      <h2 class="clause-title">Grievance Redressal Mechanism</h2>
+      <p>21.1. In accordance with the requirements of Rule 3(2) of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 and Section 13 of the DPDP Act (Consent Manager / Grievance Redressal obligations, as applicable to a Data Fiduciary), TarkStudio has designated a Grievance Officer to receive and resolve complaints from Users regarding this Policy, the processing of Personal Data, or any content displayed on the Web Hub.</p>
+      <div class="grievance-card">
+        <dl>
+          <dt>Grievance Officer</dt><dd>Brijesh — Developer &amp; Studio Lead, TarkStudio</dd>
+          <dt>Contact Email</dt><dd><a href="mailto:gyancom360@gmail.com">gyancom360@gmail.com</a></dd>
+          <dt>Jurisdiction</dt><dd>Lucknow, Uttar Pradesh, India</dd>
+          <dt>Response Timeline</dt><dd>Acknowledgement and resolution within fifteen (15) business days of receipt</dd>
+        </dl>
+      </div>
+      <p style="margin-top:22px;">21.2. Complaints or grievances may include, without limitation: requests for correction or deletion of Personal Data submitted through a review (see Section 12.3), objections to content displayed on the Web Hub, reports of a violation of Section 6 (Prohibited Conduct), reports of suspected unauthorized processing of Personal Data, or any other grievance arising in connection with this Policy.</p>
+      <p>21.3. All grievances shall be submitted in writing to the email address specified above, and shall include sufficient detail (including, where applicable, the relevant Application page, review identifier, or screenshot) to enable the Grievance Officer to investigate and address the complaint.</p>
+      <p>21.4. The Grievance Officer shall acknowledge receipt of a grievance within a reasonable period and shall use best efforts to resolve the grievance within <strong>fifteen (15) business days</strong> of receipt, in accordance with the timelines contemplated under applicable Indian law. Where a grievance requires additional time for meaningful investigation, the Grievance Officer shall communicate an interim status update within that same period.</p>
+      <p>21.5. Where you remain dissatisfied with the resolution provided by the Grievance Officer, you retain the right to escalate the matter to the appropriate authority under the DPDP Act (including the Data Protection Board of India once constituted and operational) or to pursue the dispute resolution mechanism described in Section 20.</p>
+    </section>
+
+    <!-- 22 -->
+    <section class="clause" id="s22">
+      <span class="clause-num">Section 22</span>
+      <h2 class="clause-title">Amendments to This Policy</h2>
+      <p>22.1. TarkStudio reserves the right to amend, update, or revise this Policy at any time, in its sole discretion, to reflect changes in the Web Hub's functionality, applicable law, or industry practice. The "Effective Date" and "Version" indicators at the top of this Policy shall be updated to reflect the date of the most recent revision.</p>
+      <p>22.2. Where an amendment is material — meaning it substantially expands the categories of Personal Data collected, changes the purpose of processing, or materially reduces your rights — TarkStudio shall provide reasonably prominent notice of such change on the Web Hub prior to, or promptly following, the change taking effect. Your continued use of the Web Hub following the posting of an amended Policy constitutes your acceptance of the revised terms. If you do not agree to an amended Policy, your sole remedy is to discontinue use of the Web Hub.</p>
+      <p>22.3. This Section does not affect your right to withdraw consent, or to request correction or deletion of previously submitted Personal Data, at any time in accordance with Section 12.</p>
+    </section>
+
+    <!-- 23 -->
+    <section class="clause" id="s23">
+      <span class="clause-num">Section 23</span>
+      <h2 class="clause-title">Miscellaneous Provisions</h2>
+      <p>23.1. <strong>Entire Agreement.</strong> This Policy, together with any applicable In-App Policy incorporated by reference for the relevant Application, constitutes the entire agreement between you and TarkStudio with respect to the subject matter hereof, and supersedes all prior or contemporaneous understandings, agreements, representations, and warranties, whether written or oral.</p>
+      <p>23.2. <strong>Severability.</strong> If any provision of this Policy is held by a court or arbitral tribunal of competent jurisdiction to be invalid, illegal, or unenforceable, such provision shall be modified to the minimum extent necessary to make it enforceable, or if it cannot be so modified, it shall be severed, and the remaining provisions of this Policy shall continue in full force and effect.</p>
+      <p>23.3. <strong>No Waiver.</strong> No failure or delay by TarkStudio in exercising any right, power, or remedy under this Policy shall operate as a waiver thereof, nor shall any single or partial exercise of any such right preclude any other or further exercise thereof.</p>
+      <p>23.4. <strong>Assignment.</strong> You may not assign or transfer any of your rights or obligations under this Policy without TarkStudio's prior written consent. TarkStudio may freely assign this Policy in connection with a merger, acquisition, corporate reorganization, or sale of assets, as contemplated in Section 11.5.</p>
+      <p>23.5. <strong>Force Majeure.</strong> TarkStudio shall not be liable for any failure or delay in performance under this Policy resulting from causes beyond its reasonable control, including but not limited to acts of God, natural disaster, war, terrorism, riots, embargoes, acts of civil or military authority, fire, floods, accidents, epidemics or pandemics, internet or telecommunications failures, or failures of third-party service providers (including certified app stores or the Google Sheets API).</p>
+      <p>23.6. <strong>Relationship of Parties.</strong> Nothing in this Policy shall be construed as creating any agency, partnership, joint venture, or employment relationship between you and TarkStudio.</p>
+      <p>23.7. <strong>Language.</strong> This Policy is drafted in the English language. Any translation provided is for convenience only, and the English-language version shall prevail in the event of any inconsistency.</p>
+      <p>23.8. <strong>Electronic Record.</strong> This Policy is an electronic record published in accordance with the provisions of the Information Technology Act, 2000 and the rules made thereunder, and does not require any physical or digital signature to be valid and binding.</p>
+      <p>23.9. <strong>Notices.</strong> Any notice required to be given by you to TarkStudio under this Policy shall be sent in writing to the email address specified in Section 24. TarkStudio may provide notices to you by posting on the Web Hub, which shall be deemed effective upon posting.</p>
+    </section>
+
+    <!-- 24 -->
+    <section class="clause" id="s24">
+      <span class="clause-num">Section 24</span>
+      <h2 class="clause-title">Contact Information</h2>
+      <p>For any questions regarding this Policy, requests concerning your Personal Data, Intellectual Property concerns, or any other matter relating to the Web Hub, please contact:</p>
+      <div class="grievance-card">
+        <dl>
+          <dt>Studio</dt><dd>TarkStudio</dd>
+          <dt>Operated By</dt><dd>Brijesh (Independent Developer)</dd>
+          <dt>Email</dt><dd><a href="mailto:gyancom360@gmail.com">gyancom360@gmail.com</a></dd>
+          <dt>Location</dt><dd>Lucknow, Uttar Pradesh, India</dd>
+        </dl>
+      </div>
+      <footer class="doc-footer">
+        <p>This Privacy Policy &amp; Terms of Service was last updated on the Effective Date indicated at the top of this document. TarkStudio recommends periodic review of this page for any updates. This document has been prepared to reflect the operational architecture described by the developer and general principles of Indian and international data-protection and technology law.</p>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script>
+  document.getElementById('eff-date').textContent = new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
+</script>
+</body>
+</html>
